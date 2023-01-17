@@ -1,7 +1,7 @@
 from pathlib import Path
 import csv
 
-filepath2=Path.cwd()/'project_group_Ignite/'csv_report_Ignite'/'Profit&Loss1.csv'
+filepath2=Path.cwd()/'project_group_Ignite'/'csv_report_Ignite'/'Profit&Loss1.csv'
 filepath2.touch()
 #print(filepath2.exists())
 
