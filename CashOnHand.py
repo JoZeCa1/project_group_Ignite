@@ -3,7 +3,7 @@ import csv
 
 # create a file to csv file.
 # fp = Path.cwd()/"CashOnHand.csv"
-fp=Path.cwd()/'project_group_Ignite/'csv_report_Ignite/'CashOnHand.csv'
+fp=Path.cwd()/'project_group_Ignite'/'csv_report_Ignite'/'CashOnHand.csv'
 
 # read the csv file to append profit and quantity from the csv.
 with fp.open(mode="r", encoding="UTF-8", newline="") as file:
