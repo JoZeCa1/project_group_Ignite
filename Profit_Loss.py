@@ -1,14 +1,18 @@
+# import Path 
 from pathlib import Path
+# import spreadsheet
 import csv
 
+# create a file to csv file
 filepath2=Path.cwd()/'csv_report_Ignite'/'Profit&Loss1.csv'
 
-
+# read the csv file to append profit and loss from the cvs
 with filepath2.open(mode='r',encoding='utf-8') as file:
     reader=csv.reader(file)
+    # skip header
     next(reader)
     
-
+    # create 2 empty lists to store profit and loss by each cluster
     cluster1=[]
     cluster2=[]
 
