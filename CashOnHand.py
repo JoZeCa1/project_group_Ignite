@@ -4,7 +4,7 @@ import csv
 # create a file to csv file.
 fp = Path.cwd()/"csv_report_Ignite"/"CashOnHand.csv"
 
-
+#HI TESTER
 # read the csv file to append day and cash on hand from the csv.
 with fp.open(mode="r", encoding="UTF-8", newline="") as file:
     reader = csv.reader(file)
