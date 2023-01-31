@@ -43,7 +43,8 @@ converted2 = [float(num) for num in cluster2]
 #create a function called conversion 1
 def conversion1():
     """
-    
+    This program will compute the difference in Cash-on-Hand if the current day is lower than the previous day.
+
 
     """
     #create three random variable used for later parts of the function
@@ -52,7 +53,7 @@ def conversion1():
     num_3=0
     none=[]
 
-    #extract the 3 empty list using global method 
+    #extract the 3 global scope empty list using global method into a local scope 
     global cash_deficit, cash_surplus,cash_surplus_all
     
     #create a while loop
@@ -64,10 +65,10 @@ def conversion1():
         #create if statement
         if num_3<len(converted2):
 
-            #create another if statement to check if the sum of the cash in day ... is greater than the new day
-            if converted2[num_2]>converted2[num_1]:
+            #check if the cash on hand on the current day is greater than the cash on hand the following day
+            if converted2[num_2]>converted2[num_1]: 
 
-                #if there is a cash deficit the programme will detect it and  append it into cash_deficit 
+                #if there is a cash deficit the programme will detect it and  append it into the list cash_deficit 
                 cash_deficit.append(f'[Cash Deficit] Day: {converted1[num_3]}, AMOUNT: ${converted2[num_2]-converted2[num_1]}')
 
                 #once all the values have gone through the while loop then return cash deficit
@@ -78,11 +79,15 @@ def conversion1():
 
                 #else the whole while loop repeats until all the values from each day have gone through
                 else:
+
+                    # add a value of 1 to num_2 variable
                     num_2+=1
+
+                    # add a value of 1 to num_1 variable
                     num_1+=1
                 
-            #if the cash on the present day is lower than the next day
-            else :
+            #the cash on the current day is lower than the following day
+            else:
 
                 #append into cash_surplus 
                 cash_surplus.append(f'{converted1[num_3]}')
@@ -96,12 +101,19 @@ def conversion1():
                     #return to receive a value
                     return(cash_surplus_all)
 
-                #if the length of cash_surplus is not equal the length of converted 2 repeat the while loop 
+                #if the length of cash_surplus does not hit the requirements above on line 96
                 else:
-                   num_2+=1
-                   num_1+=1 
+
+                    # add a value of 1 to num_2 variable
+                    num_2+=1
+
+                    # add a value of 1 to num_1 variable
+                    num_1+=1 
         else:
+
+            #if it does not meet the requirements above
             return(none)   
 
 #print to activate the function           
 print(conversion1())
+
