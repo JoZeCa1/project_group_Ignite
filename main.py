@@ -1,16 +1,30 @@
+# Importing all the three files Overheads.py, CashOnHand.py and Profit_Loss.py into the Main.py
 import Overheads, CashOnHand,Profit_Loss
+
+# Import Path method from pathlib
 from pathlib import Path
-# from CashOnHand import cash_deficit,cash_surplus_all
-# from Profit_Loss import pl_deficit,pl_surplus_all
-# from Overheads import highest_overhead
+
 def main():
+
+    """
+    Modularizing the Functions from Overheads.py, ProfitLoss.py and CashOnHand.py.
+    Print the results from all the 3 different files into the summary_report.txt
+    """
+    
+    #Extracting data from the 3 different files 
     from Profit_Loss import pl_deficit,pl_surplus_all
     from CashOnHand import cash_deficit,cash_surplus_all
-    from Overheads import testerbot2
-    file_path=Path.cwd()/'summary_report.txt'
-    file_path.touch()
-    print(file_path.exists())
+    from Overheads import Overheads
 
+    # instantiate an file path object to current working directory
+    file_path=Path.cwd()/'summary_report.txt'
+
+    # create a new file with `.touch()`
+    file_path.touch()
+
+    # print(file_path.exists())
+
+    #Writing the results from the three different files into the summary_report.txt and leaving spaces in between
     with file_path.open(mode='w',encoding='utf-8') as file:
         for deficit in cash_deficit:
             file.writelines(deficit +'\n')
@@ -20,7 +34,8 @@ def main():
             file.writelines(deficit +'\n')
         for surplus in pl_surplus_all:
             file.writelines(surplus+'\n')
-        for highest in testerbot2:
+        for highest in Overheads:
             file.writelines(highest+'\n')
-    
+
+#Executing the function   
 print(main())
