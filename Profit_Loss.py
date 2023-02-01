@@ -39,8 +39,9 @@ def conversion1():
     
     # Docstrings is considered as the comment. Briefly describes the function of this code.
     """
-    Pls add DocStrings TY
-
+    
+    The program will compute the difference in the net profit column if net profit on the current day is lower than the previous day
+    
     """
     
     # creating 3 new variables
