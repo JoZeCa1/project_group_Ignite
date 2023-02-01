@@ -40,7 +40,7 @@ cash_surplus_all=[]
 converted1 = [float(num) for num in cluster1]
 converted2 = [float(num) for num in cluster2]
 
-# Create a function called conversion 1.
+# def function. Create a function called conversion 1.
 def conversion1():
     """
     
