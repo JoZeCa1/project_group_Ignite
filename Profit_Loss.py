@@ -10,15 +10,13 @@ filepath2=Path.cwd()/'csv_report_Ignite'/'Profit&Loss.csv'
 # Create a new file with `.touch()`.
 filepath2.touch()
 
+# read the csv file to append profit and loss from the csv.
 with filepath2.open(mode='r',encoding='utf-8') as file:
-
-    
     reader=csv.reader(file)
-
-    
+    # skip header 
     next(reader)
     
-
+    # create 2 empty lists to store profit and loss by each cluster
     cluster3=[]
     cluster4=[]
 
