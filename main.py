@@ -4,6 +4,7 @@ import Overheads, CashOnHand,Profit_Loss
 # Import Path method from pathlib.
 from pathlib import Path
 
+# def function.
 def main():
 
     """
@@ -11,7 +12,7 @@ def main():
     Print the results from all the 3 different files into the summary_report.txt
     """
     
-    # Extracting data from the 3 different files .
+    # Extracting data from the 3 different files.
     from Profit_Loss import pl_deficit,pl_surplus_all
     from CashOnHand import cash_deficit,cash_surplus_all
     from Overheads import Overheads
