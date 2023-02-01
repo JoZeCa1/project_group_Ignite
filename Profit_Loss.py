@@ -56,35 +56,46 @@ def conversion1():
         # += adds the value of the right operand to a variable and assigns the result to the variable.
         num_3+=1
         
+        # if function
         if num_3<len(converted4):
             
+            # if function. if num_2 in variable converted4 is larger than num_1 in variable converted4.
             if converted4[num_2]>converted4[num_1]:
-
+                
+                # append the variable pl_deficit, which appends a new element at the end of a list. 
                 pl_deficit.append(f'[Profit Deficit] Day: {converted3[num_3]}, AMOUNT: ${converted4[num_2]-converted4[num_1]}')
                 
-                if num_3 == len(converted4)-1:
+                # if function. if num_3 is equal to len() of variable converted4 minus 1. 
+                if num_3 == len(converted4)-1: 
                     return(pl_deficit)
+                
+                # else function
                 else:
                     num_1+=1
                     num_2+=1
+                    
+            # else function
+            else:
                 
-
-            else :
-
+                # append the variable pl_surplus, which appends a new element at the end of a list.
                 pl_surplus.append(f'{converted3[num_3]}')
-
+                
+                # if function. if len() pl_surplus is equal to len () of converted4 minus 1. 
                 if len(pl_surplus)==len(converted4)-1:
                     
+                    # append the variable  pl_surplus_all, which appends a new element at the end of a list.
                     pl_surplus_all.append(f'[PROFIT SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
-
+                    
+                    # return function
                     return(pl_surplus_all)
 
-                    
+                # else function 
                 else:
                    num_1+=1
                    num_2+=1 
+        # else function
         else:
             return(None)           
 
-            
+# print variable conversion1            
 print(conversion1())
