@@ -43,15 +43,16 @@ def conversion1():
 
     """
     
-    
+    # creating 3 new variables
     num_1=1
     num_2=0
     num_3=0
     none=[]
     global pl_deficit, pl_surplus,pl_surplus_all
     
-
+    # while num_3 is lesser than. len() function returns the number of items in converted 4 variable. 
     while num_3 < len(converted4):
+        # += adds the value of the right operand to a variable and assigns the result to the variable.
         num_3+=1
         
         if num_3<len(converted4):
