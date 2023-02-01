@@ -11,20 +11,18 @@ def main():
     Print the results from all the 3 different files into the summary_report.txt
     """
     
-    #Extracting data from the 3 different files .
+    # Extracting data from the 3 different files .
     from Profit_Loss import pl_deficit,pl_surplus_all
     from CashOnHand import cash_deficit,cash_surplus_all
     from Overheads import Overheads
 
-    # instantiate an file path object to current working directory.
+    # Instantiate an file path object to current working directory.
     file_path=Path.cwd()/'summary_report.txt'
 
-    # create a new file with `.touch()`.
+    # Create a new file with `.touch()`.
     file_path.touch()
 
-    # print(file_path.exists()).
-
-    #Writing the results from the three different files into the summary_report.txt and leaving spaces in between.
+    # Writing the results from the three different files into the summary_report.txt and leaving spaces in between.
     with file_path.open(mode='w',encoding='utf-8') as file:
         for deficit in cash_deficit:
             file.writelines(deficit +'\n')
@@ -37,5 +35,5 @@ def main():
         for highest in Overheads:
             file.writelines(highest+'\n')
 
-#Executing the function.   
+# Executing the function.   
 print(main())
