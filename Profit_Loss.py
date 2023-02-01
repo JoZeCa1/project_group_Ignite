@@ -10,7 +10,7 @@ filepath2=Path.cwd()/'csv_report_Ignite'/'Profit&Loss.csv'
 # Create a new file with `.touch()`.
 filepath2.touch()
 
-# read the csv file to append profit and loss from the csv.
+# read the csv file to append the profit and loss from the csv.
 with filepath2.open(mode='r',encoding='utf-8') as file:
     reader=csv.reader(file)
     # skip header 
