@@ -29,18 +29,21 @@ with filepath2.open(mode='r',encoding='utf-8') as file:
 converted3 = [float(num) for num in cluster3]
 converted4 = [float(num) for num in cluster4]
 
-
-
+# create 3 new clusters
 pl_deficit=[]
 pl_surplus=[]
 pl_surplus_all=[]      
 
-
+# def function 
 def conversion1():
+    
+    # Docstrings is considered as the comment. Briefly describes the function of this code.
     """
     Pls add DocStrings TY
 
     """
+    
+    
     num_1=1
     num_2=0
     num_3=0
