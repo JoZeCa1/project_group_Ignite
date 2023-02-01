@@ -20,14 +20,14 @@ with file_path_overheads.open(mode='r',encoding='utf-8') as file:
     # Create an empty list called Cluster5.
     Cluster5=[]
 
-    # Using a for loop extract data from reader and append into CLuster5.
+    # Using a for loop extract data from reader and append into Cluster5.
     for num in reader:
         Cluster5.append(num)
    
 # Create empty list called Converted5.
 Converted5=[]
 
-# Convert the percentage values Cluster5 into a float form String and append into Converted5.
+# Convert the percentage values from Cluster5 into a float form String and append into Converted5.
 for x in Cluster5:
     Convertedx=[x[0],float(x[1])]
     Converted5.append(Convertedx)
