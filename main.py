@@ -22,7 +22,7 @@ def main():
     # Create a new file with `.touch()`.
     file_path.touch()
 
-    # Writing the results from the three different files into the summary_report.txt and leaving spaces in between.
+    # Writing the results from the three different files into the summary_report.txt and leave spaces in between.
     with file_path.open(mode='w',encoding='utf-8') as file:
         for deficit in cash_deficit:
             file.writelines(deficit +'\n')
