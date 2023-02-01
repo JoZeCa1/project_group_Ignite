@@ -1,13 +1,13 @@
-# Import Path method from pathlib 
+# Import Path method from pathlib.
 from pathlib import Path
 
-# import spreadsheet
+# import spreadsheet.
 import csv
 
-# instantiate an file path object to current working directory
+# instantiate an file path object to current working directory.
 filepath2=Path.cwd()/'csv_report_Ignite'/'Profit&Loss.csv'
 
-# create a new file with `.touch()`
+# create a new file with `.touch()`.
 filepath2.touch()
 
 
