@@ -59,7 +59,7 @@ def conversion1():
     # Create a while loop.
     while num_3 < len(converted2):
 
-        # To ensure that the while loop continues until target is meet.
+        # To ensure that the while loop continues until target is met
         num_3+=1
         
         # Create if statement.
