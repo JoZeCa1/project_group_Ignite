@@ -19,13 +19,13 @@ with filepath2.open(mode='r',encoding='utf-8') as file:
     # create 2 empty lists to store profit and loss by each cluster
     cluster3=[]
     cluster4=[]
-
+    
+    # append profit and loss as a list back to each empty list
     for day,sales,profit,op,profitloss in reader:
         cluster3.append(day)
         cluster4.append(profitloss)
 
-    
-
+# convert the numbers in each cluster into float
 converted3 = [float(num) for num in cluster3]
 converted4 = [float(num) for num in cluster4]
 
