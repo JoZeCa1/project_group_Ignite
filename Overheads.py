@@ -36,8 +36,10 @@ for x in Cluster5:
 Overheads=[]
 Overheads2=[]
 
+# def function.
 def overhead():
-
+  
+    # Docstrings is considered as the comment. Briefly describes the function of this code.
     """
     
     This function helps the team find the highest overhead category
