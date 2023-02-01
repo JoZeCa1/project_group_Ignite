@@ -2,47 +2,48 @@
 from pathlib import Path
 import csv
 
-# instantiate an file path object to current working directory.
+# Instantiate an file path object to current working directory.
 file_path_overheads=Path.cwd()/'csv_report_Ignite'/'Overheads.csv'
 
-# create a new file with `.touch()`.
+# Create a new file with `.touch()`.
 file_path_overheads.touch()
 
-# open file_path_overheads with .open() to return a file object.
+# Open file_path_overheads with .open() to return a file object.
 with file_path_overheads.open(mode='r',encoding='utf-8') as file:
 
-    # instantiate a reader object.
+    # Instantiate a reader object.
     reader=csv.reader(file)
 
-    # use `next()` to skip the header.
+    # Use `next()` to skip the header.
     next(reader)
 
     # Create an empty list called Cluster5.
     Cluster5=[]
 
-    #Using a for loop extract data from reader and append into CLuster5.
+    # Using a for loop extract data from reader and append into CLuster5.
     for num in reader:
         Cluster5.append(num)
    
-#Create empty list called Converted5.
+# Create empty list called Converted5.
 Converted5=[]
 
-#Convert the percentage values Cluster5 into a float form String and append into Converted5.
+# Convert the percentage values Cluster5 into a float form String and append into Converted5.
 for x in Cluster5:
     Convertedx=[x[0],float(x[1])]
     Converted5.append(Convertedx)
 
-#Create two empty lists.
+# Create two empty lists.
 Overheads=[]
 Overheads2=[]
 
 def overhead():
 
     """
+    
     This function helps the team find the highest overhead category
 
     """
-    #extract the 2 global scope empty list using global method into a local scope.
+    # Extract the 2 global scope empty list using global method into a local scope.
     global Overheads
     global Overheads2
 
@@ -53,10 +54,10 @@ def overhead():
     # Append the first value form Converted5 into Overheads2 which will be used for comparision purposes later in the function.
     Overheads2.append(Converted5[0])
     
-    #create a while loop.
+    # Create a while loop.
     while num_1<len(Converted5):
 
-        # add a value of 1 to num_1 variable.
+        # Add a value of 1 to num_1 variable.
         num_1+=1 
         
         # Create an if statement.
@@ -80,8 +81,7 @@ def overhead():
                     # Return to receive results.
                     return(Overheads)
                 
-                #Else statement is not required as code should run only if the statement above is true.
-
+            # Else statement is not required as code should run only if the statement above is true.
             # If it does not meet the requirements above.    
             else:
 
@@ -94,7 +94,7 @@ def overhead():
                     # Return to receive results.
                     return(Overheads)
 
-                #Else statement is not required as code should run only if the statement above is true.
+        # Else statement is not required as code should run only if the statement above is true.
         else:
             return(Overheads)        
             
