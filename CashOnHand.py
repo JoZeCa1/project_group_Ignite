@@ -70,7 +70,7 @@ def coh_function():
             #Check if the cash on hand on the current day is greater/lesser than the cash on hand the following day
             if converted2[num_2]>converted2[num_1]: 
                 #If there is a cash deficit the programme will detect it and  append it into the list cash_deficit 
-                cash_deficit.append(f'[Cash Deficit] Day: {converted1[num_3]}, AMOUNT: ${converted2[num_2]-converted2[num_1]}')
+                cash_deficit.append(f'[CASH DEFICIT] Day: {converted1[num_3]}, AMOUNT: ${converted2[num_2]-converted2[num_1]}')
                 #Once all the values have gone through the while loop then return cash deficit
                 if num_3 == len(converted2)-1:
                     #Append the results from cash deficit into the summary text report
