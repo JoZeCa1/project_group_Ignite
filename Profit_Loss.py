@@ -93,7 +93,7 @@ def Profit_loss_function():
                         file1.writelines(pl_surplus_all +'\n')
                         #Return to receive a value
                         return(pl_surplus_all)    
-                #If it does not meet the requirements in line 87        
+                #If it does not meet the requirements in line 88        
                 else:
                     # Add a value of 1 to num_2 and num_1 variable
                     num_1+=1
