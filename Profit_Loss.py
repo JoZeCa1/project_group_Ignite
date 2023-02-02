@@ -1,20 +1,20 @@
 # Import Path method from pathlib 
 from pathlib import Path
 
-# import spreadsheet
+# Import spreadsheet
 import csv
 
-# instantiate an file path object to current working directory
+# Instantiate an file path object to current working directory
 filepath2=Path.cwd()/'csv_report_Ignite'/'Profit&Loss.csv'
 
-# create a new file with `.touch()`
+# Create a new file with `.touch()`
 filepath2.touch()
 
-# read the csv file to append profit and loss from the cvs
+# Read the csv file to append profit and loss from the cvs
 with filepath2.open(mode='r',encoding='utf-8') as file:
     reader=csv.reader(file)
 
-    # skip header
+    # Skip header
     next(reader)
     
     #Create 2 empty List
@@ -29,7 +29,7 @@ with filepath2.open(mode='r',encoding='utf-8') as file:
 #Create 2 empty list
 converted3 = []
 converted4 = [] 
-#converted the days and cash from string to a float and placed day in converted 1 and profit/loss into converted 2
+#Converted the days and cash from string to a float and placed day in converted 1 and profit/loss into converted 2
 for num in cluster3:
     converteda=float(num)
     converted3.append(converteda)
@@ -63,7 +63,7 @@ def Profit_loss_function():
 
         #Create an if statement
         if num_3<len(converted4):
-            #Check if the Profit/Loss on the current day is greater/less than the Profit/Loss the following day
+            #Check if the Profit/Loss on the current day is greater than the Profit/Loss the following day
             if converted4[num_2]>converted4[num_1]:
                 #If there is a Profit deficit the programme will detect it and  append it into the list pl_deficit
                 pl_deficit.append(f'[PROFIT DEFICIT] Day: {converted3[num_3]}, AMOUNT: ${converted4[num_2]-converted4[num_1]}')
@@ -75,10 +75,12 @@ def Profit_loss_function():
                             file1.writelines(deficit +'\n')
                     #Return to receive a value
                     return(pl_deficit)
+                #If it does not meet the requirements in line 71    
                 else:
                     # Add a value of 1 to num_2 and num_1 variable
                     num_1+=1
                     num_2+=1   
+            #If it does not meet the requirements in line 67 
             else :
                 #Append into pl_surplus
                 pl_surplus.append(f'{converted3[num_3]}')
@@ -91,8 +93,9 @@ def Profit_loss_function():
                         file1.writelines(pl_surplus_all +'\n')
                         #Return to receive a value
                         return(pl_surplus_all)    
+                #If it does not meet the requirements in line 87        
                 else:
-                    # add a value of 1 to num_2 and num_1 variable
+                    # Add a value of 1 to num_2 and num_1 variable
                     num_1+=1
                     num_2+=1         
 #Activate the Function           
