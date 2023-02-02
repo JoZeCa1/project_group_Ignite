@@ -66,7 +66,7 @@ def Profit_loss_function():
             #Check if the Profit/Loss on the current day is greater than the Profit/Loss the following day
             if converted4[num_2]>converted4[num_1]:
                 #If there is a Profit deficit the programme will detect it and  append it into the list pl_deficit
-                pl_deficit.append(f'[PROFIT DEFICIT] Day: {converted3[num_3]}, AMOUNT: ${converted4[num_2]-converted4[num_1]}')
+                pl_deficit.append(f'[PROFIT DEFICIT] DAY: {converted3[num_3]}, AMOUNT: ${converted4[num_2]-converted4[num_1]}')
                 #Check if all the values have gone through the while loop
                 if num_3 == len(converted4)-1:
                     #Append the results to summary text report
