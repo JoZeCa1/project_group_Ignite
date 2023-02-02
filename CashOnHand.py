@@ -79,10 +79,12 @@ def coh_function():
                             file2.writelines(deficit +'\n')
                     #Return to receive a value
                     return(cash_deficit)
+                #If it does not meet the requirements in line 75    
                 else:
                     #Add a value of 1 to num_2 and num_1variable
                     num_2+=1
-                    num_1+=1           
+                    num_1+=1      
+            #If it does not meet the requirements in line 71    
             else:
                 #Append into cash_surplus 
                 cash_surplus.append(f'{converted1[num_3]}')
@@ -95,6 +97,7 @@ def coh_function():
                         file2.writelines(cash_surplus_all +'\n')
                     #Return to receive a value
                     return(cash_surplus_all)
+                #If it does not meet the requirements in line 90
                 else:
                     # Add a value of 1 to num_2 and num_1 variable
                     num_2+=1
