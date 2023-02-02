@@ -83,7 +83,7 @@ def overhead_function():
                 # Once all the values in Converted5 has gone through the function.
                 if num_1==len(Converted5)-1:
                     # Append the Highest Overhead into the list Overhead.
-                    Overheads=(f'[HIGHEST OVERHEAD] {Overheads2[0][0]} {Overheads2[0][1]}%')
+                    Overheads=(f'[HIGHEST OVERHEAD] {Overheads2[0][0].upper()} {Overheads2[0][1]}%')
                     #Write Highest Overhead into a summary test report
                     with file_path.open(mode='w',encoding='utf-8') as file:
                         file.writelines(Overheads+'\n')
