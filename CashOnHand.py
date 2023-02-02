@@ -43,9 +43,11 @@ for num in cluster2:
 def coh_function():
     """
     This program will compute the difference in Cash-on-Hand if the current day is lower than the previous day.
+    Write it into the summary_report.txt to be activated in the main.py
     """
-    #Create a file path
+    #Create a file path and create the summary_report.txt
     file_path=Path.cwd()/'summary_report.txt'
+    file_path.touch()
     #create three random variable used for later parts of the function
     num_1=1
     num_2=0
