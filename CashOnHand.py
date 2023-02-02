@@ -39,7 +39,6 @@ for num in cluster2:
     convertedy=float(num)
     converted2.append(convertedy)
 
-#create a function called conversion 1
 def coh_function():
     """
     This program will compute the difference in Cash-on-Hand if the current day is lower than the previous day.
@@ -48,70 +47,57 @@ def coh_function():
     #Create a file path and create the summary_report.txt
     file_path=Path.cwd()/'summary_report.txt'
     file_path.touch()
-    #create three random variable used for later parts of the function
+
+    #Create three random variable used for later parts of the function
     num_1=1
     num_2=0
     num_3=0
 
-    #create 3 empty list to store the data for cash deficit and cash surplus
+    #Create 3 empty list
     cash_deficit=[]
     cash_surplus=[]
     cash_surplus_all=[]   
     
-    #create a while loop
+    #Create a while loop
     while num_3 < len(converted2):
 
-        #to ensure that the while loop continues until target is meet.
+        #Ensure that the while loop continues until target is meet.
         num_3+=1
 
-        #create if statement
+        #Create if statement
         if num_3<len(converted2):
 
-            #check if the cash on hand on the current day is greater than the cash on hand the following day
+            #Check if the cash on hand on the current day is greater/lesser than the cash on hand the following day
             if converted2[num_2]>converted2[num_1]: 
-
-                #if there is a cash deficit the programme will detect it and  append it into the list cash_deficit 
+                #If there is a cash deficit the programme will detect it and  append it into the list cash_deficit 
                 cash_deficit.append(f'[Cash Deficit] Day: {converted1[num_3]}, AMOUNT: ${converted2[num_2]-converted2[num_1]}')
-
-                #once all the values have gone through the while loop then return cash deficit
+                #Once all the values have gone through the while loop then return cash deficit
                 if num_3 == len(converted2)-1:
-
                     #Append the results from cash deficit into the summary text report
                     with file_path.open(mode='a',encoding='utf-8') as file2:
                         for deficit in cash_deficit:
                             file2.writelines(deficit +'\n')
-
-                    #return to receive a value
+                    #Return to receive a value
                     return(cash_deficit)
-
-                #else the whole while loop repeats until all the values from each day have gone through
                 else:
-                    # add a value of 1 to num_2 and num_1variable
+                    #Add a value of 1 to num_2 and num_1variable
                     num_2+=1
                     num_1+=1           
-            #the cash on the current day is lower than the following day
             else:
-                #append into cash_surplus 
+                #Append into cash_surplus 
                 cash_surplus.append(f'{converted1[num_3]}')
-
-                #if the length of cash_surplus is equal the length of converted 2 then there is cash surplus everyday
+                #If the length of cash_surplus is equal the length of converted 2 then there is cash surplus everyday
                 if len(cash_surplus)==len(converted2)-1:
-                    
-                    #since there is cash surplus everyday, append the statement into empty list cash_surplus_all
-                    cash_surplus_all.append(f'[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
+                    #Since there is cash surplus everyday, append the statement into empty list cash_surplus_all
+                    cash_surplus_all=(f'[CASH SURPLUS] CASH ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
                     #Append the results into the summary text report
                     with file_path.open(mode='a',encoding='utf-8') as file2:
-                        for deficit in cash_surplus_all:
-                            file2.writelines(deficit +'\n')
-
-                    #return to receive a value
+                        file2.writelines(cash_surplus_all +'\n')
+                    #Return to receive a value
                     return(cash_surplus_all)
-
-                #if the length of cash_surplus does not hit the requirements above on line 96
                 else:
-                    # add a value of 1 to num_2 and num_1 variable
+                    # Add a value of 1 to num_2 and num_1 variable
                     num_2+=1
                     num_1+=1 
-
-#print to activate the function           
+#Activate the function           
 print(coh_function())
