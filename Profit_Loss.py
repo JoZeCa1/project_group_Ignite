@@ -76,7 +76,7 @@ def Profit_loss_function():
                     #Return to receive a value
                     return(pl_deficit)
                 else:
-                    # add a value of 1 to num_2 and num_1 variable
+                    # Add a value of 1 to num_2 and num_1 variable
                     num_1+=1
                     num_2+=1   
             else :
@@ -84,7 +84,7 @@ def Profit_loss_function():
                 pl_surplus.append(f'{converted3[num_3]}')
                 #If the length of pl_surplus is equal the length of converted 4 then there is profit surplus everyday
                 if len(pl_surplus)==len(converted4)-1:
-                    
+                    #Since there is profit/loss surplus everyday, append the statement into empty list pl_surplus_all
                     pl_surplus_all=(f'[PROFIT SURPLUS] PROFIT ON EACH DAY IS HIGHER THAN THE PREVIOUS DAY')
                     #Append the results to summary text report
                     with file_path.open(mode='a',encoding='utf-8') as file1:
