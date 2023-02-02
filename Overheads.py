@@ -74,11 +74,11 @@ def overhead_function():
                     Overheads=(f'[HIGHEST OVERHEAD] {Overheads2}')
                     #Write Highest Overhead into a summary test report
                     with file_path.open(mode='w',encoding='utf-8') as file:
-                        file.write(Overheads+'\n')
+                        file.writelines(Overheads+'\n')
                     # Return to receive results.
                     return(Overheads)
                 
-            # If it does not meet the requirements above.    
+            #If it does not meet the requirements in line 63    
             else:
                 # Once all the values in Converted5 has gone through the function.
                 if num_1==len(Converted5)-1:
@@ -86,8 +86,8 @@ def overhead_function():
                     Overheads=(f'[HIGHEST OVERHEAD] {Overheads2[0][0]} {Overheads2[0][1]}%')
                     #Write Highest Overhead into a summary test report
                     with file_path.open(mode='w',encoding='utf-8') as file:
-                        file.write(Overheads+'\n')
+                        file.writelines(Overheads+'\n')
                     # Return to receive results.
                     return(Overheads)
-#Activate the function            
+#Activate the Function           
 print(overhead_function())
