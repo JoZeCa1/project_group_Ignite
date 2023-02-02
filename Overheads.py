@@ -32,11 +32,13 @@ for x in Cluster5:
     Converted5.append(Convertedx)
 
 def overhead_function():
+    """
+    This function helps the team find the highest overhead category and write it into the summary_report.txt to be activated in the main.py
+    """
+    #Create File path to summary_report.txt and create it
     file_path=Path.cwd()/'summary_report.txt'
-    
-    """
-    This function helps the team find the highest overhead category
-    """
+    file_path.touch()
+
     #Create 2 empty List
     Overheads=[]
     Overheads2=[]
@@ -87,5 +89,5 @@ def overhead_function():
                         file.write(Overheads+'\n')
                     # Return to receive results.
                     return(Overheads)
-            
+#Activate the function            
 print(overhead_function())
